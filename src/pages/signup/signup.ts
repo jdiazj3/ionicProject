@@ -5,6 +5,8 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { User } from '../../providers';
 import { MainPage } from '../';
 import { Api } from '../../providers/api/api';
+import { LoginServiceProvider } from '../../providers/login-service/login-service';
+import { Usuario } from '../../shared/user';
 
 @IonicPage()
 @Component({
@@ -15,12 +17,13 @@ export class SignupPage {
   // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type
-  account: { username: string, correo: string, password: string, nombre: string, apellido: string } = {
-    username:'',
-    correo: '',
-    password: '',
-    nombre:'',
-    apellido:''
+  account: Usuario ={ 
+    usuario:'',
+    Username:'',
+    Password:'',
+    primernombre:'',
+    segundonombre:'',
+    correo:'' 
   };
 
   // Our translated text strings
@@ -30,7 +33,7 @@ export class SignupPage {
     public user: User,
     public toastCtrl: ToastController,
     public translateService: TranslateService,
-  public apiService:Api) {
+  public loginService:LoginServiceProvider) {
 
     this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
       this.signupErrorString = value;
@@ -38,17 +41,18 @@ export class SignupPage {
   }
 
   doSignup() {
-    this.apiService.post('users/signup',this.account).subscribe
-    (registro=>{
+    this.loginService.register(this.account).subscribe(
+    (registro)=>{
       let datoUsuario ={
-        username:this.account.username,
-        password:this.account.password
+        username:this.account.Username,
+        password:this.account.Password
+        
       }
-      this.apiService.post('users/login',datoUsuario);
+      this.loginService.login(datoUsuario);
       (usuario)=>{
          console.log(usuario);}
           },
-    (error)=>{console.log('xx',error);});
+    (error)=>{console.log('JMD ERR',error);});
 
 
     // Attempt to login in through our User service
