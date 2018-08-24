@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { baseUrl } from '../../shared/config';
 import { Observable } from 'rxjs/Observable';
 import { Usuario } from '../../shared/user';
-import { Events, ToastController } from 'ionic-angular/umd';
+import { Events, ToastController } from 'ionic-angular';
 
 
 interface AuthResponse {

@@ -3,7 +3,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { TranslateService } from '@ngx-translate/core';
 import { Config, Nav, Platform } from 'ionic-angular';
-
 import { FirstRunPage } from '../pages';
 import { Settings } from '../providers';
 import { LoginServiceProvider } from '../providers/login-service/login-service';
@@ -43,7 +42,8 @@ export class MyApp {
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' }
+    { title: 'Search', component: 'SearchPage' },
+    { title: 'Mapas', component: 'MapaPrincipalPage' }
   ]
 
   constructor(private translate: TranslateService, 
@@ -64,6 +64,7 @@ export class MyApp {
     });
     this.initTranslate();
   }
+
 
   initTranslate() {
     // Set the default language for translation strings, and the current language.
