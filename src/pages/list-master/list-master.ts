@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Item } from '../../models/item';
-import { Items } from '../../providers';
+import { Items,Api } from '../../providers';
 
 @IonicPage()
 @Component({
@@ -12,8 +12,16 @@ import { Items } from '../../providers';
 export class ListMasterPage {
   currentItems: any;
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController,
+    public apiService:Api) {
     this.currentItems = this.items.query();
+    this.apiService.get('estudiante').subscribe(
+      (estudiantes)=>{
+        console.log(estudiantes);
+      },(err)=>{
+        console.log(err);
+      }
+    )
   }
 
   /**
