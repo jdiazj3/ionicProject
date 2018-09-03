@@ -19,8 +19,8 @@ export class SignupPage {
   // sure to add it to the type
   account: Usuario ={ 
     usuario:'',
-    Username:'',
-    Password:'',
+    username:'',
+    password:'',
     primernombre:'',
     segundonombre:'',
     correo:'' 

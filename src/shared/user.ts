@@ -1,7 +1,7 @@
 export interface Usuario{
     usuario:string;
-    Username:string;
-    Password:string;
+    username:string;
+    password:string;
     primernombre:string;
     segundonombre:string;
     correo:string;
