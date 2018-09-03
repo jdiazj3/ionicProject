@@ -44,8 +44,8 @@ export class SignupPage {
     this.loginService.register(this.account).subscribe(
     (registro)=>{
       let datoUsuario ={
-        username:this.account.Username,
-        password:this.account.Password
+        username:this.account.username,
+        password:this.account.password
         
       }
       this.loginService.login(datoUsuario);
