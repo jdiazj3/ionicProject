@@ -5,12 +5,43 @@
     <div class="splash-logo"></div>
     <div class="splash-intro">
       {{ 'WELCOME_INTRO' | translate }}
+  
     </div>
   </div>
-  <div padding>
-    <button ion-button small (click)="signup()" >{{ 'SIGNUP' | translate }}</button>     
+  <div id="todo">
+  <div id="izquierda" >
+    <button ion-button small (click)="signup()" >{{ 'SIGNUP' | translate }}</button> 
+    <ion-fab >
+      <button ion-fab color="danger"><ion-icon name="md-share"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab color="primary"  (click)="signup()"><ion-icon name="logo-vimeo"></ion-icon></button>
+      </ion-fab-list>
+      <ion-fab-list side="bottom">
+        <button ion-fab color="secondary"><ion-icon name="logo-facebook"></ion-icon></button>
+      </ion-fab-list>
+      <ion-fab-list side="left">
+        <button ion-fab color="light"><ion-icon name="logo-googleplus"></ion-icon></button>
+      </ion-fab-list>
+      <ion-fab-list side="right">
+        <button ion-fab color="dark"><ion-icon name="logo-twitter"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>   
+  </div> 
+  <div id="contenido" >
     <button ion-button small (click)="login()" >{{ 'LOGIN' | translate }}</button>
-    <button ion-button small (click)="CargaMenu()" >{{ 'GO_TO_MENU' | translate }}</button>
-    
+    <ion-fab >
+     
+             <button ion-fab color="dark"(click)="login()" ><ion-icon name="logo-twitter"></ion-icon></button>
+     
+    </ion-fab>   
   </div>
+  <div id="derecha" >
+    <button ion-button small (click)="CargaMenu()" >{{ 'GO_TO_MENU' | translate }}</button>
+  </div>
+  </div>
+<div>
+  
+  
+</div>
+
 </ion-content>

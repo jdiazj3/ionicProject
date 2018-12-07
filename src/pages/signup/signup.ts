@@ -33,7 +33,7 @@ export class SignupPage {
     public user: User,
     public toastCtrl: ToastController,
     public translateService: TranslateService,
-  public loginService:LoginServiceProvider) {
+    public loginService:LoginServiceProvider) {
 
     this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
       this.signupErrorString = value;
@@ -60,7 +60,7 @@ export class SignupPage {
    //   this.navCtrl.push(MainPage);
    // }, (err) => {
 
-    //  this.navCtrl.push(MainPage);
+      this.navCtrl.push(MainPage);
 
       // Unable to sign up
      // let toast = this.toastCtrl.create({

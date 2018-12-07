@@ -44,6 +44,15 @@ export class LoginPage {
   // Attempt to login in through our User service
   doLogin() {
     this.LoginServiceProvider.login(this.account);
+
+    let toast = this.toastCtrl.create({
+      message: "Bienvenido :  " + this.account.username + "  Ahora podrás enviar denuncias y botones de pánico",
+      //message: this.loginErrorString,
+      duration: 3000,
+      position: 'top'
+    });
+    toast.present();
+
    /*  this.user.login(this.account).subscribe((resp) => {
       this.navCtrl.push(MainPage);
     }, (err) => {

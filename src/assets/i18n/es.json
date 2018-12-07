@@ -13,16 +13,16 @@
     "MAP_TITLE": "Mapa",
     "WELCOME_INTRO": "Aplicación para control del crimen En Bogotá Colombia",
 
-    "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a al Ionic Super Starter",
-    "TUTORIAL_SLIDE1_DESCRIPTION": "El <b>Ionic Super Starter</b> es un starter de Ionic completo con muchas páginas preconstruidas y mejores prácticas.",
+    "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a a Control Crime app de control de delincuencia en Bogotá, ahora será más sencillo denunciar",
+    "TUTORIAL_SLIDE1_DESCRIPTION": "La App <b>Control  Crime</b> es una aplicación que te permite alertar a las autoridades de manera sencilla.",
     "TUTORIAL_SKIP_BUTTON": "Saltar",
     "GO_TO_MENU": "Menú",
 
-    "TUTORIAL_SLIDE2_TITLE": "Cómo usar el Super Starter",
-    "TUTORIAL_SLIDE2_DESCRIPTION": "Monta los varios tipos de página que quieras y quita los que no. Hemos incluido muchas estructuras de página comunes en apps móviles, como páginas de inicio de sesión y registro, pestañas, y esta página de tutorial.",
+    "TUTORIAL_SLIDE2_TITLE": "Cómo usar Control  Crime",
+    "TUTORIAL_SLIDE2_DESCRIPTION": "Puedes registrarte o usar los botones de pánico sin registro, el sistema tomará la información de tu dispositivo como ubicación y Dni desde donde  reportas para garantizar que puedas reportar de manera incoginita",
 
     "TUTORIAL_SLIDE3_TITLE": "Empezando",
-    "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Échale un vistazo al README del Super Starter para ver el tutorial completo.",
+    "TUTORIAL_SLIDE3_DESCRIPTION": "Registrate y logeate o usa los botones de pánico.",
 
     "SETTINGS_TITLE": "Ajustes",
     "SETTINGS_OPTION1": "Opción 1",
