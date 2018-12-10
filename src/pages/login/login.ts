@@ -43,7 +43,7 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   doLogin() {
-    this.LoginServiceProvider.login(this.account);
+    this.LoginServiceProvider.login(this.account)
 
     let toast = this.toastCtrl.create({
       message: "Bienvenido :  " + this.account.username + "  Ahora podrás enviar denuncias y botones de pánico",
@@ -51,8 +51,9 @@ export class LoginPage {
       duration: 3000,
       position: 'top'
     });
+    this.navCtrl.push(MainPage);
     toast.present();
-
+  
    /*  this.user.login(this.account).subscribe((resp) => {
       this.navCtrl.push(MainPage);
     }, (err) => {
